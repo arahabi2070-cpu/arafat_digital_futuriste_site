@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   publisher: siteName,
   alternates: { canonical: '/' },
   generator: 'Next.js',
+  verification: { google: 'Y2C5vvdefxQwED4irSIHdDJOiFOPpj2dDha6hre9d_s' },
   keywords: ['ADF', 'Arafat Digital Futuriste', 'design graphique à Garoua', 'graphiste à Garoua', 'logo au Cameroun', 'identité visuelle Cameroun', 'vidéo publicitaire Garoua'],
   openGraph: { title: 'ADF — Arafat Digital Futuriste | Design graphique à Garoua', description, url: siteUrl, type: 'website', locale: 'fr_FR', siteName, images: [{ url: '/hero-studio.png', width: 1200, height: 630, alt: 'ADF — studio de design graphique et vidéo à Garoua' }] },
   twitter: { card: 'summary_large_image', title: 'ADF — Arafat Digital Futuriste | Design graphique à Garoua', description, images: ['/hero-studio.png'] },
