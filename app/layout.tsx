@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   alternates: { canonical: '/' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   generator: 'Next.js',
   verification: { google: 'Y2C5vvdefxQwED4irSIHdDJOiFOPpj2dDha6hre9d_s' },
   keywords: ['ADF', 'Arafat Digital Futuriste', 'design graphique à Garoua', 'graphiste à Garoua', 'logo au Cameroun', 'identité visuelle Cameroun', 'vidéo publicitaire Garoua'],
@@ -37,7 +48,7 @@ function StructuredData() {
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'ProfessionalService', '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, telephone: '+237695928319', priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' } },
+      { '@type': 'ProfessionalService', '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, serviceType: ['Design graphique', 'Création vidéo', 'Identité visuelle', 'Formation design'], telephone: '+237695928319', priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' }, contactPoint: { '@type': 'ContactPoint', telephone: '+237695928319', contactType: 'customer service', availableLanguage: ['fr'] } },
       { '@type': 'WebSite', '@id': `${siteUrl}/#website`, url: siteUrl, name: siteName, publisher: { '@id': `${siteUrl}/#business` }, inLanguage: 'fr-FR' },
     ],
   }
