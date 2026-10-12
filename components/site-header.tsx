@@ -26,7 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <Image src="/adf-logo.png" alt="ADF Arafat Digital Futuriste" width={40} height={40} className="size-10 rounded-lg object-contain" />
+          <Image src="/adf-logo.png" alt="ADF Arafat Digital Futuriste" width={48} height={48} className="size-12 object-contain" priority />
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-bold tracking-tight">ADF</span>
             <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Arafat Digital Futuriste</span>
