@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adf-go.vercel.app'
 const siteName = 'ADF Arafat Digital futuriste'
-const description = 'ADF accompagne les écoles, entreprises, supermarchés, boutiques et organisations à Garoua et au Cameroun avec des sites web, boutiques en ligne, campagnes promotionnelles, affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires.'
+const description = 'Depuis Garoua, ADF accompagne en ligne partout au Cameroun les écoles, entreprises, supermarchés, boutiques et organisations avec des sites web, boutiques en ligne, campagnes promotionnelles, affiches, contenus réseaux sociaux et vidéos publicitaires.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

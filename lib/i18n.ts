@@ -41,7 +41,7 @@ export const fr = {
     title: 'Je vous accompagne pour mieux promouvoir votre activité.',
     titleAccent: 'Design, campagnes & vidéos qui font vendre.',
     subtitle:
-      "Écoles, entreprises, supermarchés, boutiques et organisations : je transforme vos offres en campagnes claires et attractives avec sites web, boutiques en ligne, affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
+      "En ligne depuis Garoua et partout au Cameroun, j’accompagne les écoles, entreprises, supermarchés, boutiques et organisations avec des sites web, boutiques en ligne, campagnes, affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
     ctaPrimary: 'Discuter de mon projet sur WhatsApp',
     ctaSecondary: 'Voir mes réalisations',
     trust1: 'Livraison numérique rapide',
@@ -62,9 +62,9 @@ export const fr = {
     kicker: 'Pour promouvoir votre activité',
     title: 'Un accompagnement promotionnel de l’idée à la diffusion',
     subtitle:
-      'Je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché, créer un site web ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
+      'À distance, partout au Cameroun : je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché, créer un site web ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
     audienceTitle: 'Écoles, entreprises, commerces et organisations',
-    audienceText: 'Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, boutique en ligne, site vitrine, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
+    audienceText: 'Depuis Garoua, nous travaillons en ligne avec des clients partout au Cameroun. Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, boutique en ligne, site vitrine, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
   },
   services: {
     logo: {
@@ -205,7 +205,7 @@ export const en: Dict = {
     title: 'I help you promote your activity with clarity.',
     titleAccent: 'Design, campaigns & videos that sell.',
     subtitle:
-      'Schools, companies, supermarkets, shops and organizations: I turn your offers into clear, attractive campaigns with websites, online stores, posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.',
+      'Working online from Garoua across Cameroon, I help schools, companies, supermarkets, shops and organizations with websites, online stores, campaigns, posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.',
     ctaPrimary: 'Chat about my project on WhatsApp',
     ctaSecondary: 'See my work',
     trust1: 'Fast digital delivery',
@@ -226,9 +226,9 @@ export const en: Dict = {
     kicker: 'Promote your activity',
     title: 'Promotional support from idea to publication',
     subtitle:
-      'I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening, a website or an event with the right messages and formats.',
+      'Working remotely across Cameroon, I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening, a website or an event with the right messages and formats.',
     audienceTitle: 'Schools, companies, shops and organizations',
-    audienceText: 'Enrollment campaigns, openings, sales, product launches, online stores, showcase websites, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
+    audienceText: 'From Garoua, we work online with clients across Cameroon. Enrollment campaigns, openings, sales, product launches, online stores, showcase websites, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
   },
   services: {
     logo: {
