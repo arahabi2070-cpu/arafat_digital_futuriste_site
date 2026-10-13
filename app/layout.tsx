@@ -7,11 +7,12 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { FloatingContact } from '@/components/floating-contact'
 import { PwaRegister } from '@/components/pwa-register'
+import { CONTACT } from '@/lib/i18n'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adf-go.vercel.app'
-const siteName = 'ADF — Arafat Digital Futuriste'
+const siteName = 'ADF Arafat Digital futuriste'
 const description = 'ADF, studio de design graphique et vidéo à Garoua, Cameroun : logos, identité visuelle, affiches, cartes de visite, vidéos publicitaires, formations et ebooks.'
 
 export const metadata: Metadata = {
@@ -48,7 +49,7 @@ function StructuredData() {
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'ProfessionalService', '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, serviceType: ['Design graphique', 'Création vidéo', 'Identité visuelle', 'Formation design'], telephone: '+237695928319', priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' }, contactPoint: { '@type': 'ContactPoint', telephone: '+237695928319', contactType: 'customer service', availableLanguage: ['fr'] } },
+      { '@type': ['ProfessionalService', 'LocalBusiness'], '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, category: CONTACT.category, sameAs: [CONTACT.googleProfileUrl], serviceType: ['Design graphique', 'Création vidéo', 'Identité visuelle', 'Formation design'], telephone: CONTACT.phoneRaw, priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' }, contactPoint: { '@type': 'ContactPoint', telephone: CONTACT.phoneRaw, contactType: 'customer service', availableLanguage: ['fr'] } },
       { '@type': 'WebSite', '@id': `${siteUrl}/#website`, url: siteUrl, name: siteName, publisher: { '@id': `${siteUrl}/#business` }, inLanguage: 'fr-FR' },
     ],
   }

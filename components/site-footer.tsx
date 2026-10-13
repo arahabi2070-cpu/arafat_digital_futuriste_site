@@ -21,6 +21,8 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">{t.footer.tagline}</p>
+          <p className="mt-3 text-xs font-medium text-foreground">{CONTACT.company} · {CONTACT.category}</p>
+          <a href={CONTACT.googleProfileUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs text-primary hover:underline">Voir notre établissement sur Google</a>
         </div>
 
         <div>

@@ -6,7 +6,9 @@ export const CONTACT = {
   whatsapp: '237695928319',
   city: 'Garoua, Cameroun',
   ceo: 'Arafat Garga',
-  company: 'ADF — Arafat Digital Futuriste',
+  company: 'ADF Arafat Digital futuriste',
+  category: 'Graphiste à Garoua',
+  googleProfileUrl: 'https://share.google/g2FChI7GjWbi1N9nk',
 }
 
 export function waLink(message: string) {

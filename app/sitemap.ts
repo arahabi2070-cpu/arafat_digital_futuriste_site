@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/portfolio', priority: 0.8 },
     { path: '/formation', priority: 0.7 },
     { path: '/contact', priority: 0.8 },
+    { path: '/google-profile', priority: 0.6 },
   ]
   return routes.map(({ path, priority }) => ({ url: `${base}${path}`, changeFrequency: 'weekly', priority }))
 }
