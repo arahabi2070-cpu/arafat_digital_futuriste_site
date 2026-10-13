@@ -37,11 +37,11 @@ export const fr = {
     langLabel: 'EN',
   },
   hero: {
-    badge: 'Studio de design · Garoua, Cameroun',
-    title: 'Des visuels qui font vendre.',
-    titleAccent: 'Design & vidéo haut de gamme.',
+    badge: 'Communication promotionnelle · Garoua, Cameroun',
+    title: 'Je vous accompagne pour mieux promouvoir votre activité.',
+    titleAccent: 'Design, campagnes & vidéos qui font vendre.',
     subtitle:
-      "Logos, identité visuelle, affiches, cartes de visite, vidéos publicitaires cinématographiques, formations et ebooks. Un rendu ultra professionnel, livré rapidement, à des prix justes en FCFA.",
+      "Écoles, entreprises, supermarchés, boutiques et organisations : je transforme vos offres en campagnes claires et attractives avec affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
     ctaPrimary: 'Discuter de mon projet sur WhatsApp',
     ctaSecondary: 'Voir mes réalisations',
     trust1: 'Livraison numérique rapide',
@@ -59,10 +59,12 @@ export const fr = {
     supportValue: 'Rapide',
   },
   servicesSection: {
-    kicker: 'Ce que je crée pour vous',
-    title: 'Un studio complet pour votre image de marque',
+    kicker: 'Pour promouvoir votre activité',
+    title: 'Un accompagnement promotionnel de l’idée à la diffusion',
     subtitle:
-      'De la première idée au fichier final prêt à imprimer ou à publier. Chaque projet est traité avec un soin professionnel du détail.',
+      'Je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
+    audienceTitle: 'Écoles, entreprises, commerces et organisations',
+    audienceText: 'Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
   },
   services: {
     logo: {
@@ -72,10 +74,10 @@ export const fr = {
       features: ['Logo en haute résolution', 'Fichiers vectoriels', 'Charte de couleurs', 'Déclinaisons réseaux'],
     },
     social: {
-      name: 'Affiches & visuels réseaux',
-      desc: 'Des affiches et publications qui attirent le regard et déclenchent le clic sur Facebook, WhatsApp et Instagram.',
+      name: 'Campagnes promotionnelles & réseaux',
+      desc: 'Des campagnes visuelles pour promouvoir une école, une entreprise, un supermarché, une boutique ou un événement sur Facebook, WhatsApp et Instagram.',
       price: '3 000',
-      features: ['Formats adaptés à chaque réseau', 'Textes accrocheurs inclus', 'Fichiers prêts à publier'],
+      features: ['Message et offre clarifiés', 'Formats adaptés à chaque réseau', 'Textes accrocheurs inclus', 'Fichiers prêts à publier'],
     },
     print: {
       name: 'Cartes de visite & print',
@@ -193,11 +195,11 @@ export const en: Dict = {
     langLabel: 'FR',
   },
   hero: {
-    badge: 'Design studio · Garoua, Cameroon',
-    title: 'Visuals that sell.',
-    titleAccent: 'Premium design & video.',
+    badge: 'Promotional communication · Garoua, Cameroon',
+    title: 'I help you promote your activity with clarity.',
+    titleAccent: 'Design, campaigns & videos that sell.',
     subtitle:
-      'Logos, brand identity, posters, business cards, cinematic advertising videos, training and ebooks. Ultra professional results, delivered fast, at fair prices in FCFA.',
+      'Schools, companies, supermarkets, shops and organizations: I turn your offers into clear, attractive campaigns with posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.',
     ctaPrimary: 'Chat about my project on WhatsApp',
     ctaSecondary: 'See my work',
     trust1: 'Fast digital delivery',
@@ -215,10 +217,12 @@ export const en: Dict = {
     supportValue: 'Fast',
   },
   servicesSection: {
-    kicker: 'What I create for you',
-    title: 'A complete studio for your brand',
+    kicker: 'Promote your activity',
+    title: 'Promotional support from idea to publication',
     subtitle:
-      'From the first idea to the final file, ready to print or publish. Every project gets professional attention to detail.',
+      'I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening or an event with the right messages and formats.',
+    audienceTitle: 'Schools, companies, shops and organizations',
+    audienceText: 'Enrollment campaigns, openings, sales, product launches, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
   },
   services: {
     logo: {
@@ -228,10 +232,10 @@ export const en: Dict = {
       features: ['High-resolution logo', 'Vector files', 'Color palette', 'Social media versions'],
     },
     social: {
-      name: 'Posters & social media visuals',
-      desc: 'Posters and posts that grab attention and drive clicks on Facebook, WhatsApp and Instagram.',
+      name: 'Promotional campaigns & social media',
+      desc: 'Visual campaigns to promote a school, company, supermarket, shop or event on Facebook, WhatsApp and Instagram.',
       price: '3 000',
-      features: ['Formats for each platform', 'Catchy copy included', 'Ready-to-publish files'],
+      features: ['Clear offer and message', 'Formats for each platform', 'Catchy copy included', 'Ready-to-publish files'],
     },
     print: {
       name: 'Business cards & print',

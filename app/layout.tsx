@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adf-go.vercel.app'
 const siteName = 'ADF Arafat Digital futuriste'
-const description = 'ADF, studio de design graphique et vidéo à Garoua, Cameroun : logos, identité visuelle, affiches, cartes de visite, vidéos publicitaires, formations et ebooks.'
+const description = 'ADF accompagne les écoles, entreprises, supermarchés, boutiques et organisations à Garoua avec des campagnes promotionnelles, affiches, contenus réseaux sociaux, supports imprimés, vidéos publicitaires et identité visuelle.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   generator: 'Next.js',
   verification: { google: 'Y2C5vvdefxQwED4irSIHdDJOiFOPpj2dDha6hre9d_s' },
-  keywords: ['ADF', 'Arafat Digital Futuriste', 'design graphique à Garoua', 'graphiste à Garoua', 'logo au Cameroun', 'identité visuelle Cameroun', 'vidéo publicitaire Garoua'],
+  keywords: ['ADF', 'Arafat Digital Futuriste', 'communication promotionnelle Garoua', 'campagne publicitaire Garoua', 'publicité pour école Cameroun', 'publicité entreprise Garoua', 'publicité supermarché Garoua', 'design graphique à Garoua', 'vidéo publicitaire Garoua'],
   openGraph: { title: 'ADF Arafat Digital futuriste — Design graphique à Garoua', description, url: siteUrl, type: 'website', locale: 'fr_FR', siteName, images: [{ url: '/hero-studio.png', width: 1200, height: 630, alt: 'ADF Arafat Digital futuriste — studio de design graphique à Garoua' }] },
   twitter: { card: 'summary_large_image', title: 'ADF Arafat Digital futuriste — Design graphique à Garoua', description, images: ['/hero-studio.png'] },
   icons: { icon: '/favicon.png', shortcut: '/favicon.png', apple: '/apple-icon.png' },
@@ -49,7 +49,7 @@ function StructuredData() {
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': ['ProfessionalService', 'LocalBusiness'], '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, category: CONTACT.category, sameAs: [CONTACT.googleProfileUrl], serviceType: ['Design graphique', 'Création vidéo', 'Identité visuelle', 'Formation design'], telephone: CONTACT.phoneRaw, priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' }, contactPoint: { '@type': 'ContactPoint', telephone: CONTACT.phoneRaw, contactType: 'customer service', availableLanguage: ['fr'] } },
+      { '@type': ['ProfessionalService', 'LocalBusiness'], '@id': `${siteUrl}/#business`, name: siteName, alternateName: ['ADF', 'Arafat Digital Futuriste'], url: siteUrl, logo: `${siteUrl}/adf-logo.png`, image: `${siteUrl}/hero-studio.png`, description, category: CONTACT.category, sameAs: [CONTACT.googleProfileUrl], knowsAbout: ['Communication promotionnelle', 'Campagnes publicitaires', 'Promotion d’écoles', 'Promotion d’entreprises', 'Promotion de supermarchés', 'Communication des commerces', 'Design graphique', 'Création vidéo'], serviceType: ['Communication promotionnelle', 'Campagnes publicitaires', 'Supports de communication pour écoles et entreprises', 'Design graphique', 'Création vidéo', 'Identité visuelle', 'Formation design'], telephone: CONTACT.phoneRaw, priceRange: 'FCFA', areaServed: [{ '@type': 'City', name: 'Garoua' }, { '@type': 'Country', name: 'Cameroun' }], address: { '@type': 'PostalAddress', addressLocality: 'Garoua', addressCountry: 'CM' }, contactPoint: { '@type': 'ContactPoint', telephone: CONTACT.phoneRaw, contactType: 'customer service', availableLanguage: ['fr'] } },
       { '@type': 'WebSite', '@id': `${siteUrl}/#website`, url: siteUrl, name: siteName, publisher: { '@id': `${siteUrl}/#business` }, inLanguage: 'fr-FR' },
     ],
   }

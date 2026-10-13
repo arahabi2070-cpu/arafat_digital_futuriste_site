@@ -23,6 +23,11 @@ export function ServicesContent() {
           </p>
         </div>
 
+        <div className="mb-10 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+          <h2 className="font-display text-2xl font-bold text-balance">{t.servicesSection.audienceTitle}</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{t.servicesSection.audienceText}</p>
+        </div>
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_KEYS.map((key) => (
             <ServiceCard key={key} serviceKey={key} detailed />

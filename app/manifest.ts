@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'ADF Arafat Digital futuriste',
     short_name: 'ADF',
-    description: 'Studio de design graphique et vidéo à Garoua, Cameroun.',
+    description: 'Communication promotionnelle, design graphique et vidéo pour écoles, entreprises, supermarchés et commerces à Garoua, Cameroun.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
