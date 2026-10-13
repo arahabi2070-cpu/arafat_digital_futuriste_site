@@ -31,6 +31,7 @@ export function SiteFooter() {
             <li><Link href="/services" className="hover:text-primary">{t.services.logo.name}</Link></li>
             <li><Link href="/services" className="hover:text-primary">{t.services.social.name}</Link></li>
             <li><Link href="/services" className="hover:text-primary">{t.services.video.name}</Link></li>
+            <li><Link href="/services" className="hover:text-primary">{t.services.web.name}</Link></li>
             <li><Link href="/formation" className="hover:text-primary">{t.nav.training}</Link></li>
           </ul>
         </div>

@@ -42,7 +42,7 @@ export function ServiceCard({ serviceKey, detailed }: { serviceKey: ServiceKey; 
         <div>
           <p className="text-xs text-muted-foreground">{t.common.from}</p>
           <p className="font-display text-2xl font-bold">
-            {s.price} <span className="text-sm font-medium text-muted-foreground">{t.common.fcfa}</span>
+            {s.price} {s.price !== 'Sur devis' && s.price !== 'Quote' && <span className="text-sm font-medium text-muted-foreground">{t.common.fcfa}</span>}
           </p>
         </div>
       </div>

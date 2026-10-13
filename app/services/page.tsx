@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { ServicesContent } from '@/components/services-content'
 
 export const metadata: Metadata = {
-  title: 'Communication promotionnelle pour écoles, entreprises et commerces à Garoua',
-  description: 'ADF accompagne les écoles, entreprises, supermarchés, boutiques et organisations à Garoua : campagnes promotionnelles, affiches, réseaux sociaux, supports imprimés et vidéos publicitaires.',
+  title: 'Sites web, boutiques en ligne et communication promotionnelle à Garoua',
+  description: 'ADF crée des sites web, boutiques en ligne et campagnes promotionnelles pour les écoles, entreprises, supermarchés, boutiques et organisations à Garoua et au Cameroun.',
   alternates: { canonical: '/services' },
 }
 

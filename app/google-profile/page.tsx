@@ -4,7 +4,7 @@ import { CONTACT } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'ADF sur Google',
-  description: 'Informations officielles de ADF Arafat Digital futuriste, graphiste à Garoua, Cameroun.',
+  description: 'Informations officielles de ADF Arafat Digital futuriste : sites web, boutiques en ligne et communication promotionnelle à Garoua et au Cameroun.',
   alternates: { canonical: '/google-profile' },
 }
 

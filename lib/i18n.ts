@@ -41,7 +41,7 @@ export const fr = {
     title: 'Je vous accompagne pour mieux promouvoir votre activité.',
     titleAccent: 'Design, campagnes & vidéos qui font vendre.',
     subtitle:
-      "Écoles, entreprises, supermarchés, boutiques et organisations : je transforme vos offres en campagnes claires et attractives avec affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
+      "Écoles, entreprises, supermarchés, boutiques et organisations : je transforme vos offres en campagnes claires et attractives avec sites web, boutiques en ligne, affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
     ctaPrimary: 'Discuter de mon projet sur WhatsApp',
     ctaSecondary: 'Voir mes réalisations',
     trust1: 'Livraison numérique rapide',
@@ -62,9 +62,9 @@ export const fr = {
     kicker: 'Pour promouvoir votre activité',
     title: 'Un accompagnement promotionnel de l’idée à la diffusion',
     subtitle:
-      'Je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
+      'Je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché, créer un site web ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
     audienceTitle: 'Écoles, entreprises, commerces et organisations',
-    audienceText: 'Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
+    audienceText: 'Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, boutique en ligne, site vitrine, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
   },
   services: {
     logo: {
@@ -90,6 +90,12 @@ export const fr = {
       desc: 'Publicités et annonces vidéo cinématographiques, ultra-réalistes, montées ou générées pour marquer les esprits.',
       price: '25 000',
       features: ['Montage professionnel', 'Rendu cinématographique', 'Musique & voix off', 'Formats réseaux & TV'],
+    },
+    web: {
+      name: 'Sites web & boutiques en ligne',
+      desc: 'Des sites vitrines, sites professionnels et boutiques en ligne pour présenter vos offres, recevoir des demandes et vendre sur Internet.',
+      price: 'Sur devis',
+      features: ['Site adapté au mobile', 'Présentation de vos services', 'Boutique et catalogue en ligne', 'Référencement de base et mise en ligne'],
     },
     training: {
       name: 'Formation design & vidéo',
@@ -199,7 +205,7 @@ export const en: Dict = {
     title: 'I help you promote your activity with clarity.',
     titleAccent: 'Design, campaigns & videos that sell.',
     subtitle:
-      'Schools, companies, supermarkets, shops and organizations: I turn your offers into clear, attractive campaigns with posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.',
+      'Schools, companies, supermarkets, shops and organizations: I turn your offers into clear, attractive campaigns with websites, online stores, posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.',
     ctaPrimary: 'Chat about my project on WhatsApp',
     ctaSecondary: 'See my work',
     trust1: 'Fast digital delivery',
@@ -220,9 +226,9 @@ export const en: Dict = {
     kicker: 'Promote your activity',
     title: 'Promotional support from idea to publication',
     subtitle:
-      'I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening or an event with the right messages and formats.',
+      'I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening, a website or an event with the right messages and formats.',
     audienceTitle: 'Schools, companies, shops and organizations',
-    audienceText: 'Enrollment campaigns, openings, sales, product launches, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
+    audienceText: 'Enrollment campaigns, openings, sales, product launches, online stores, showcase websites, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
   },
   services: {
     logo: {
@@ -248,6 +254,12 @@ export const en: Dict = {
       desc: 'Cinematic, ultra-realistic video ads and announcements, edited or generated to make an impact.',
       price: '25 000',
       features: ['Professional editing', 'Cinematic look', 'Music & voice-over', 'Social & TV formats'],
+    },
+    web: {
+      name: 'Websites & online stores',
+      desc: 'Showcase websites, professional websites and online stores to present your offers, receive enquiries and sell online.',
+      price: 'Quote',
+      features: ['Mobile-friendly site', 'Your services presented clearly', 'Online store and catalog', 'Basic SEO and launch'],
     },
     training: {
       name: 'Design & video training',
@@ -335,5 +347,5 @@ export const en: Dict = {
 
 export const dictionaries: Record<Locale, Dict> = { fr, en }
 
-export const SERVICE_KEYS = ['logo', 'social', 'print', 'video', 'training', 'ebooks'] as const
+export const SERVICE_KEYS = ['logo', 'social', 'print', 'video', 'web', 'training', 'ebooks'] as const
 export type ServiceKey = (typeof SERVICE_KEYS)[number]
