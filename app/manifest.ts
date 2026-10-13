@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ADF — Arafat Digital Futuriste',
+    name: 'ADF Arafat Digital futuriste',
     short_name: 'ADF',
     description: 'Studio de design graphique et vidéo à Garoua, Cameroun.',
     start_url: '/',
