@@ -1,4 +1,4 @@
-import { PenTool, Megaphone, CreditCard, Clapperboard, Globe2, GraduationCap, BookOpen, type LucideIcon } from 'lucide-react'
+import { PenTool, Megaphone, CreditCard, Clapperboard, Globe2, GraduationCap, type LucideIcon } from 'lucide-react'
 import type { ServiceKey } from '@/lib/i18n'
 
 export const serviceIcons: Record<ServiceKey, LucideIcon> = {
@@ -8,5 +8,4 @@ export const serviceIcons: Record<ServiceKey, LucideIcon> = {
   video: Clapperboard,
   web: Globe2,
   training: GraduationCap,
-  ebooks: BookOpen,
 }

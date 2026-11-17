@@ -12,12 +12,12 @@ import { CONTACT } from '@/lib/i18n'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adf-go.vercel.app'
-const siteName = 'ADF Arafat Digital futuriste'
+const siteName = 'ADF Arafat Digital Futuriste'
 const description = 'Depuis Garoua, ADF accompagne en ligne partout au Cameroun les écoles, entreprises, supermarchés, boutiques et organisations avec des sites web, boutiques en ligne, campagnes promotionnelles, affiches, contenus réseaux sociaux et vidéos publicitaires.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: 'ADF Arafat Digital futuriste — Design graphique à Garoua', template: '%s | ADF Arafat Digital futuriste' },
+  title: { default: 'ADF Arafat Digital Futuriste — Design graphique à Garoua', template: '%s | ADF Arafat Digital Futuriste' },
   description,
   applicationName: siteName,
   authors: [{ name: siteName }],
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   verification: { google: 'Y2C5vvdefxQwED4irSIHdDJOiFOPpj2dDha6hre9d_s' },
   keywords: ['ADF', 'Arafat Digital Futuriste', 'création site web Cameroun', 'boutique en ligne Cameroun', 'communication promotionnelle Garoua', 'campagne publicitaire Garoua', 'publicité pour école Cameroun', 'publicité entreprise Garoua', 'publicité supermarché Garoua', 'design graphique à Garoua', 'vidéo publicitaire Garoua'],
-  openGraph: { title: 'ADF Arafat Digital futuriste — Design graphique à Garoua', description, url: siteUrl, type: 'website', locale: 'fr_FR', siteName, images: [{ url: '/hero-studio.png', width: 1200, height: 630, alt: 'ADF Arafat Digital futuriste — studio de design graphique à Garoua' }] },
-  twitter: { card: 'summary_large_image', title: 'ADF Arafat Digital futuriste — Design graphique à Garoua', description, images: ['/hero-studio.png'] },
+  openGraph: { title: 'ADF Arafat Digital Futuriste — Design graphique à Garoua', description, url: siteUrl, type: 'website', locale: 'fr_FR', siteName, images: [{ url: '/hero-studio.png', width: 1200, height: 630, alt: 'ADF Arafat Digital Futuriste — studio de design graphique à Garoua' }] },
+  twitter: { card: 'summary_large_image', title: 'ADF Arafat Digital Futuriste — Design graphique à Garoua', description, images: ['/hero-studio.png'] },
   icons: { icon: '/favicon.png', shortcut: '/favicon.png', apple: '/apple-icon.png' },
 }
 

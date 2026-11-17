@@ -69,7 +69,13 @@ export function ContactContent() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <WhatsAppButton message={t.finalCta.button} />
+              <WhatsAppButton
+                message={
+                  locale === "fr"
+                    ? "Bonjour ADF, je souhaite démarrer un projet. Pouvez-vous me faire un devis ?"
+                    : "Hello ADF, I would like to start a project. Could you send me a quote?"
+                }
+              />
               <CallButton />
             </div>
           </div>
@@ -145,7 +151,7 @@ export function ContactContent() {
 
               <button
                 type="submit"
-                className="brand-gradient inline-flex h-12 w-full items-center justify-center gap-2 rounded-full font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#128c4a] font-bold text-white shadow-lg shadow-emerald-900/25 transition-all hover:-translate-y-0.5 hover:bg-[#0e7040] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-600/40"
               >
                 <Send className="size-4" aria-hidden="true" />
                 {t.contactPage.formSubmit}

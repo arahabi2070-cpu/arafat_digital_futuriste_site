@@ -3,6 +3,8 @@ import { StatsStrip } from '@/components/home/stats-strip'
 import { ServicesPreview } from '@/components/home/services-preview'
 import { ProcessSection } from '@/components/home/process-section'
 import { DeliverySection } from '@/components/home/delivery-section'
+import { AboutSection } from '@/components/home/about-section'
+import { ShopSection } from '@/components/home/shop-section'
 import { FinalCta } from '@/components/home/final-cta'
 
 export default function HomePage() {
@@ -11,8 +13,10 @@ export default function HomePage() {
       <Hero />
       <StatsStrip />
       <ServicesPreview />
+      <AboutSection />
       <ProcessSection />
       <DeliverySection />
+      <ShopSection />
       <FinalCta />
     </main>
   )

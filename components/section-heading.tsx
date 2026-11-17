@@ -6,12 +6,14 @@ export function SectionHeading({
   subtitle,
   center,
   className,
+  id,
 }: {
   kicker?: string
   title: string
   subtitle?: string
   center?: boolean
   className?: string
+  id?: string
 }) {
   return (
     <div className={cn('flex flex-col gap-3', center && 'items-center text-center', className)}>
@@ -21,7 +23,7 @@ export function SectionHeading({
           {kicker}
         </span>
       )}
-      <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">{title}</h2>
+      <h2 id={id} className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">{title}</h2>
       {subtitle && <p className="max-w-2xl text-pretty leading-relaxed text-muted-foreground">{subtitle}</p>}
     </div>
   )

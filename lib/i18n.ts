@@ -6,7 +6,7 @@ export const CONTACT = {
   whatsapp: '237695928319',
   city: 'Garoua, Cameroun',
   ceo: 'Arafat Garga',
-  company: 'ADF Arafat Digital futuriste',
+  company: 'ADF Arafat Digital Futuriste',
   category: 'Graphiste à Garoua',
   googleProfileUrl: 'https://share.google/g2FChI7GjWbi1N9nk',
 }
@@ -22,7 +22,8 @@ export const fr = {
     home: 'Accueil',
     services: 'Services',
     portfolio: 'Portfolio',
-    training: 'Formation & Ebooks',
+    training: 'Formation',
+    shop: 'Boutique',
     contact: 'Contact',
     quote: 'Demander un devis',
   },
@@ -52,7 +53,7 @@ export const fr = {
     delivery: 'Livraison numérique',
     deliveryValue: '24-72h',
     revisions: 'Révisions incluses',
-    revisionsValue: 'Jusqu’à satisfaction',
+    revisionsValue: '2 incluses',
     price: 'Tarifs',
     priceValue: 'Justes en FCFA',
     support: 'Réponse WhatsApp',
@@ -64,7 +65,7 @@ export const fr = {
     subtitle:
       'À distance, partout au Cameroun : je vous aide à présenter une offre, lancer une rentrée scolaire, annoncer une promotion de supermarché, créer un site web ou développer la visibilité d’une entreprise, avec les bons messages et les bons formats.',
     audienceTitle: 'Écoles, entreprises, commerces et organisations',
-    audienceText: 'Depuis Garoua, nous travaillons en ligne avec des clients partout au Cameroun. Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, boutique en ligne, site vitrine, événement ou communication régulière : nous construisons les supports nécessaires pour informer, attirer et convertir votre public.',
+    audienceText: 'Depuis Garoua, je travaille en ligne avec des clients partout au Cameroun. Campagne de rentrée, inscription, ouverture, soldes, lancement de produit, boutique en ligne, site vitrine, événement ou communication régulière : je construis les supports nécessaires pour informer, attirer et convertir votre public.',
   },
   services: {
     logo: {
@@ -103,12 +104,6 @@ export const fr = {
       price: '20 000',
       features: ['Sessions pratiques', 'Support de cours', 'Suivi personnalisé', 'Certificat de fin'],
     },
-    ebooks: {
-      name: 'Ebooks',
-      desc: 'Des ebooks professionnels pour apprendre le design et la vidéo, à télécharger immédiatement.',
-      price: '2 000',
-      features: ['Téléchargement immédiat', 'Contenu clair et illustré', 'Mises à jour incluses'],
-    },
   },
   process: {
     kicker: 'Simple et transparent',
@@ -116,7 +111,7 @@ export const fr = {
     steps: [
       { title: 'Vous me contactez', desc: 'Un message WhatsApp ou un appel suffit pour décrire votre besoin.' },
       { title: 'Devis gratuit', desc: 'Je vous envoie un prix clair en FCFA et le délai de livraison.' },
-      { title: 'Je crée', desc: 'Je réalise votre projet avec des révisions jusqu’à votre satisfaction.' },
+      { title: 'Je crée', desc: 'Je réalise votre projet avec 2 révisions incluses pour ajuster le résultat.' },
       { title: 'Livraison', desc: 'Vous recevez vos fichiers numériques, prêts à l’emploi.' },
     ],
   },
@@ -125,7 +120,7 @@ export const fr = {
     title: 'Comment vous recevez votre travail',
     digital: {
       title: 'Support numérique',
-      desc: 'Tous les fichiers (logos, visuels, vidéos, ebooks) sont livrés numériquement, où que vous soyez.',
+      desc: 'Tous les fichiers (logos, visuels, vidéos) sont livrés numériquement, où que vous soyez.',
     },
     physical: {
       title: 'Supports physiques',
@@ -133,7 +128,7 @@ export const fr = {
     },
     free: {
       title: 'Livraison gratuite',
-      desc: 'Livraison offerte au centre-ville de Garoua uniquement.',
+      desc: 'Numérique gratuite partout au Cameroun ; physique offerte au centre-ville de Garoua.',
     },
   },
   finalCta: {
@@ -150,12 +145,33 @@ export const fr = {
   },
   trainingPage: {
     kicker: 'Montez en compétences',
-    title: 'Formations & Ebooks',
+    title: 'Formation',
     subtitle: 'Apprenez à créer des visuels et des vidéos de qualité professionnelle, à votre rythme.',
     formationTitle: 'Formations personnalisées',
-    ebookTitle: 'Ebooks à télécharger',
     enroll: "S'inscrire sur WhatsApp",
-    buy: 'Acheter sur WhatsApp',
+  },
+  about: {
+    kicker: 'À propos',
+    title: 'ADF — Arafat Digital Futuriste',
+    text: "ADF (Arafat Digital Futuriste) est une activité de design graphique et de vidéo basée à Garoua, au Cameroun. En ligne, j'accompagne les écoles, entreprises, supermarchés, boutiques et organisations partout au Cameroun : sites web, boutiques en ligne, campagnes promotionnelles, affiches, contenus réseaux sociaux, supports imprimés et vidéos publicitaires. Le logo et le design sont les outils ; votre promotion est l’objectif.",
+    text2: "Pour discuter de votre projet, le plus simple est WhatsApp : devis gratuit et réponse rapide.",
+  },
+  shop: {
+    kicker: 'Boutique',
+    title: 'La boutique en ligne arrive bientôt',
+    text: "Une nouvelle boutique en ligne, séparée de ce site et entièrement dédiée aux produits ADF, est en préparation. En attendant son ouverture, les commandes se font simplement sur WhatsApp.",
+    button: 'Commander sur WhatsApp',
+  },
+  legalPage: {
+    kicker: 'Informations légales',
+    title: 'Mentions légales',
+    subtitle: 'Les informations essentielles sur l’éditeur et l’hébergement de ce site.',
+    publisherTitle: 'Éditeur du site',
+    publisherText: "Ce site est édité par ADF — Arafat Digital Futuriste, activité de design graphique et de vidéo basée à Garoua, Cameroun.",
+    hostingTitle: 'Hébergement',
+    hostingText: "Ce site est hébergé par Vercel Inc. (vercel.com).",
+    contactTitle: 'Contact',
+    contactText: "Pour toute question relative à ce site, vous pouvez joindre ADF par téléphone ou WhatsApp au +237 695 928 319.",
   },
   contactPage: {
     kicker: 'Parlons de votre projet',
@@ -177,7 +193,9 @@ export const fr = {
     company: 'Entreprise',
     contact: 'Contact',
     rights: 'Tous droits réservés.',
-    admin: 'Espace administrateur',
+    legal: 'Mentions légales',
+    basedLine: 'Depuis Garoua · Services en ligne partout au Cameroun',
+    googleLink: 'Voir notre établissement sur Google',
   },
 }
 
@@ -186,7 +204,8 @@ export const en: Dict = {
     home: 'Home',
     services: 'Services',
     portfolio: 'Portfolio',
-    training: 'Training & Ebooks',
+    training: 'Training',
+    shop: 'Shop',
     contact: 'Contact',
     quote: 'Get a quote',
   },
@@ -216,7 +235,7 @@ export const en: Dict = {
     delivery: 'Digital delivery',
     deliveryValue: '24-72h',
     revisions: 'Revisions included',
-    revisionsValue: 'Until you’re happy',
+    revisionsValue: '2 included',
     price: 'Pricing',
     priceValue: 'Fair, in FCFA',
     support: 'WhatsApp reply',
@@ -228,7 +247,7 @@ export const en: Dict = {
     subtitle:
       'Working remotely across Cameroon, I help you promote a school enrollment campaign, a supermarket offer, a company launch, a shop opening, a website or an event with the right messages and formats.',
     audienceTitle: 'Schools, companies, shops and organizations',
-    audienceText: 'From Garoua, we work online with clients across Cameroon. Enrollment campaigns, openings, sales, product launches, online stores, showcase websites, events or regular communication: we build the materials needed to inform, attract and convert your audience.',
+    audienceText: 'From Garoua, I work online with clients across Cameroon. Enrollment campaigns, openings, sales, product launches, online stores, showcase websites, events or regular communication: I build the materials needed to inform, attract and convert your audience.',
   },
   services: {
     logo: {
@@ -267,12 +286,6 @@ export const en: Dict = {
       price: '20 000',
       features: ['Hands-on sessions', 'Course materials', 'Personalized follow-up', 'Completion certificate'],
     },
-    ebooks: {
-      name: 'Ebooks',
-      desc: 'Professional ebooks to learn design and video, available for instant download.',
-      price: '2 000',
-      features: ['Instant download', 'Clear, illustrated content', 'Free updates'],
-    },
   },
   process: {
     kicker: 'Simple and transparent',
@@ -280,7 +293,7 @@ export const en: Dict = {
     steps: [
       { title: 'You reach out', desc: 'A WhatsApp message or a call is enough to describe your need.' },
       { title: 'Free quote', desc: 'I send you a clear price in FCFA and the delivery time.' },
-      { title: 'I create', desc: 'I build your project with revisions until you are satisfied.' },
+      { title: 'I create', desc: 'I build your project with 2 revisions included to fine-tune the result.' },
       { title: 'Delivery', desc: 'You receive your digital files, ready to use.' },
     ],
   },
@@ -289,7 +302,7 @@ export const en: Dict = {
     title: 'How you receive your work',
     digital: {
       title: 'Digital delivery',
-      desc: 'All files (logos, visuals, videos, ebooks) are delivered digitally, wherever you are.',
+      desc: 'All files (logos, visuals, videos) are delivered digitally, wherever you are.',
     },
     physical: {
       title: 'Physical items',
@@ -297,7 +310,7 @@ export const en: Dict = {
     },
     free: {
       title: 'Free delivery',
-      desc: 'Free delivery within Garoua city center only.',
+      desc: 'Free digital delivery anywhere in Cameroon; free physical delivery in downtown Garoua.',
     },
   },
   finalCta: {
@@ -314,12 +327,33 @@ export const en: Dict = {
   },
   trainingPage: {
     kicker: 'Level up your skills',
-    title: 'Training & Ebooks',
+    title: 'Training',
     subtitle: 'Learn to create professional-quality visuals and videos, at your own pace.',
     formationTitle: 'Personalized training',
-    ebookTitle: 'Downloadable ebooks',
     enroll: 'Enroll on WhatsApp',
-    buy: 'Buy on WhatsApp',
+  },
+  about: {
+    kicker: 'About',
+    title: 'ADF — Arafat Digital Futuriste',
+    text: "ADF (Arafat Digital Futuriste) is a graphic design and video activity based in Garoua, Cameroon. Working online, I help schools, companies, supermarkets, shops and organizations across Cameroon with websites, online stores, promotional campaigns, posters, social media content, print materials and advertising videos. Design is the tool; promotion is the goal.",
+    text2: "The simplest way to discuss your project is WhatsApp: free quote and a fast reply.",
+  },
+  shop: {
+    kicker: 'Shop',
+    title: 'The online shop is coming soon',
+    text: "A new online shop, separate from this website and fully dedicated to ADF products, is in preparation. Until it opens, orders are simply placed on WhatsApp.",
+    button: 'Order on WhatsApp',
+  },
+  legalPage: {
+    kicker: 'Legal information',
+    title: 'Legal notice',
+    subtitle: 'The essential information about this site’s publisher and hosting.',
+    publisherTitle: 'Site publisher',
+    publisherText: "This website is published by ADF — Arafat Digital Futuriste, a graphic design and video activity based in Garoua, Cameroon.",
+    hostingTitle: 'Hosting',
+    hostingText: "This website is hosted by Vercel Inc. (vercel.com).",
+    contactTitle: 'Contact',
+    contactText: "For any question about this website, you can reach ADF by phone or WhatsApp at +237 695 928 319.",
   },
   contactPage: {
     kicker: 'Let’s talk about your project',
@@ -341,11 +375,13 @@ export const en: Dict = {
     company: 'Company',
     contact: 'Contact',
     rights: 'All rights reserved.',
-    admin: 'Admin area',
+    legal: 'Legal notice',
+    basedLine: 'Based in Garoua · Online services across Cameroon',
+    googleLink: 'See our business on Google',
   },
 }
 
 export const dictionaries: Record<Locale, Dict> = { fr, en }
 
-export const SERVICE_KEYS = ['logo', 'social', 'print', 'video', 'web', 'training', 'ebooks'] as const
+export const SERVICE_KEYS = ['logo', 'social', 'print', 'video', 'web', 'training'] as const
 export type ServiceKey = (typeof SERVICE_KEYS)[number]

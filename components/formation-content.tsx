@@ -3,14 +3,13 @@
 import { useLanguage } from "@/components/language-provider"
 import { PageHero } from "@/components/page-hero"
 import { SectionHeading } from "@/components/section-heading"
-import { WhatsAppButton, CallButton } from "@/components/contact-buttons"
+import { WhatsAppButton } from "@/components/contact-buttons"
 import { FinalCta } from "@/components/home/final-cta"
-import { GraduationCap, BookOpen, Check } from "lucide-react"
+import { GraduationCap, Check } from "lucide-react"
 
 export function FormationContent() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const training = t.services.training
-  const ebooks = t.services.ebooks
 
   return (
     <main>
@@ -44,7 +43,11 @@ export function FormationContent() {
               <div className="mt-5">
                 <WhatsAppButton
                   label={t.trainingPage.enroll}
-                  message={`${training.name} — ${t.trainingPage.enroll}`}
+                  message={
+                    locale === "fr"
+                      ? "Bonjour ADF, je souhaite m'inscrire à la formation design & vidéo. Pouvez-vous me donner les détails ?"
+                      : "Hello ADF, I would like to enroll in the design & video training. Could you send me the details?"
+                  }
                   full
                 />
               </div>
@@ -66,33 +69,6 @@ export function FormationContent() {
                 ))}
               </ul>
             </div>
-          </div>
-        </section>
-
-        {/* Ebooks */}
-        <section aria-labelledby="ebooks-heading" className="mt-16">
-          <SectionHeading id="ebooks-heading" title={t.trainingPage.ebookTitle} subtitle={ebooks.desc} />
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {ebooks.features.map((feature) => (
-              <article
-                key={feature}
-                className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
-              >
-                <div className="brand-soft-surface flex aspect-[4/3] items-center justify-center border-b border-primary/10">
-                  <BookOpen className="size-14 text-primary" aria-hidden="true" />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-lg font-semibold">{ebooks.name}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{feature}</p>
-                  <div className="mt-4 flex items-center justify-between gap-3">
-                    <span className="font-display text-xl font-bold">
-                      {ebooks.price} <span className="text-xs font-medium text-muted-foreground">{t.common.fcfa}</span>
-                    </span>
-                    <WhatsAppButton label={t.trainingPage.buy} message={`${ebooks.name}: ${feature}`} />
-                  </div>
-                </div>
-              </article>
-            ))}
           </div>
         </section>
       </div>

@@ -18,6 +18,7 @@ export function SiteHeader() {
     { href: '/', label: t.nav.home },
     { href: '/services', label: t.nav.services },
     { href: '/portfolio', label: t.nav.portfolio },
+    { href: '/#boutique', label: t.nav.shop },
     { href: '/formation', label: t.nav.training },
     { href: '/contact', label: t.nav.contact },
   ]

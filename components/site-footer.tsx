@@ -22,8 +22,8 @@ export function SiteFooter() {
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">{t.footer.tagline}</p>
           <p className="mt-3 text-xs font-medium text-foreground">{CONTACT.company} · {CONTACT.category}</p>
-          <p className="mt-1 text-xs text-muted-foreground">Depuis Garoua · Services en ligne partout au Cameroun</p>
-          <a href={CONTACT.googleProfileUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs text-primary hover:underline">Voir notre établissement sur Google</a>
+          <p className="mt-1 text-xs text-muted-foreground">{t.footer.basedLine}</p>
+          <a href={CONTACT.googleProfileUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs text-primary hover:underline">{t.footer.googleLink}</a>
         </div>
 
         <div>
@@ -34,6 +34,7 @@ export function SiteFooter() {
             <li><Link href="/services" className="hover:text-primary">{t.services.video.name}</Link></li>
             <li><Link href="/services" className="hover:text-primary">{t.services.web.name}</Link></li>
             <li><Link href="/formation" className="hover:text-primary">{t.nav.training}</Link></li>
+            <li><Link href="/#boutique" className="hover:text-primary">{t.nav.shop}</Link></li>
           </ul>
         </div>
 
@@ -63,7 +64,7 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
           <p>© {new Date().getFullYear()} {CONTACT.company}. {t.footer.rights}</p>
-          <Link href="/admin" className="hover:text-primary">{t.footer.admin}</Link>
+          <Link href="/mentions-legales" className="hover:text-primary">{t.footer.legal}</Link>
         </div>
       </div>
     </footer>

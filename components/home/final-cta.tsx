@@ -20,7 +20,7 @@ export function FinalCta() {
               message="Bonjour ADF, je veux démarrer mon projet. Voici mon besoin :"
               label={t.finalCta.button}
               size="lg"
-              className="bg-background !text-primary shadow-xl"
+              className="shadow-xl ring-2 ring-white/60"
             />
             <CallButton size="lg" className="border-primary-foreground/30 bg-primary-foreground/10 !text-primary-foreground hover:bg-primary-foreground/20" />
           </div>

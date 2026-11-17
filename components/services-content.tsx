@@ -19,7 +19,7 @@ export function ServicesContent() {
         <div className="mb-8 flex items-start gap-3 rounded-2xl border border-primary/20 bg-accent/60 p-4">
           <Info className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
           <p className="text-sm leading-relaxed text-accent-foreground">
-            {t.common.from} — {t.finalCta.subtitle}
+            {t.finalCta.subtitle}
           </p>
         </div>
 
