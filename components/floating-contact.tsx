@@ -18,7 +18,7 @@ export function FloatingContact() {
             href={waLink('Bonjour ADF, je souhaite un devis gratuit.')}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full bg-[#128c4a] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/25 transition-transform hover:scale-105"
+            className="flex items-center gap-2 rounded-full brand-gradient px-4 py-3 text-sm font-bold text-white shadow-lg shadow-sky-900/25 transition-all hover:scale-105 hover:brightness-110"
           >
             <MessageCircle className="size-5" aria-hidden="true" />
             {t.common.whatsapp}

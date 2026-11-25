@@ -151,7 +151,7 @@ export function ContactContent() {
 
               <button
                 type="submit"
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#128c4a] font-bold text-white shadow-lg shadow-emerald-900/25 transition-all hover:-translate-y-0.5 hover:bg-[#0e7040] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-600/40"
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full brand-gradient font-bold text-white shadow-lg shadow-sky-900/25 transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-500/40"
               >
                 <Send className="size-4" aria-hidden="true" />
                 {t.contactPage.formSubmit}
