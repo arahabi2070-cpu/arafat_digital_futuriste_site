@@ -15,15 +15,38 @@ export function ContactContent() {
     e.preventDefault()
     const fd = new FormData(e.currentTarget)
     const name = String(fd.get("name") || "")
+    const phone = String(fd.get("phone") || "")
     const svc = String(fd.get("service") || "")
     const budget = String(fd.get("budget") || "")
     const details = String(fd.get("details") || "")
+
+    // Archivage du message dans la boîte de réception de
+    // l'administration (Phase 2) : requête lancée SANS attendre —
+    // le départ WhatsApp ci-dessous reste le parcours principal et
+    // n'est jamais retardé ni bloqué par l'enregistrement. Sans base
+    // configurée côté serveur, l'API répond simplement
+    // { enregistre: false } et rien ne change pour le visiteur.
+    void fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nom: name,
+        telephone: phone,
+        service: svc,
+        budget,
+        message: details,
+      }),
+      keepalive: true,
+    }).catch(() => {
+      // Silencieux : WhatsApp prend le relais, comme avant.
+    })
 
     const hi = locale === "fr" ? "Bonjour ADF, voici ma demande :" : "Hello ADF, here is my request:"
     const lines = [
       hi,
       "",
       `${t.contactPage.formName}: ${name}`,
+      phone ? `${t.contactPage.formPhone}: ${phone}` : "",
       `${t.contactPage.formService}: ${svc}`,
       budget ? `${t.contactPage.formBudget}: ${budget}` : "",
       details ? `${t.contactPage.formMessage}: ${details}` : "",
@@ -97,6 +120,20 @@ export function ContactContent() {
                   id="name"
                   name="name"
                   required
+                  className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none focus:border-ring focus:ring-2 focus:ring-ring/30"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-foreground">
+                  {t.contactPage.formPhone}
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autoComplete="tel"
+                  placeholder="+237 6XX XX XX XX"
                   className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none focus:border-ring focus:ring-2 focus:ring-ring/30"
                 />
               </div>
