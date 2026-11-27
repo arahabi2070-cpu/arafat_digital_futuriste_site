@@ -104,3 +104,37 @@ JSONB.
   avis service créé → invisible sur l'accueil ; approuvé → visible
   avec la moyenne et le JSON-LD ; masqué → invisible à nouveau.
   Builds `pnpm build` verts.
+
+## Catalogue intégré — Étape 3b du plan console
+
+La section « Boutique » de la page d'accueil affiche les produits
+numériques **en direct de la boutique** (adf-store.vercel.app) :
+visuel, titre, accroche, prix — et chaque carte renvoie, en
+nouvel onglet, vers la fiche du produit dans la boutique, où le
+paiement et la livraison restent ceux, prouvés, de la boutique.
+L'offre du livre **imprimé** (7 500 FCFA, WhatsApp) reste
+présentée séparément, au-dessus, sans confusion avec les
+produits numériques.
+
+- **Source** : `GET {BOUTIQUE_URL}/api/catalogue-public` — flux
+  en lecture seule de la boutique (produits actifs uniquement,
+  aucune donnée client). Base configurable par la variable
+  d'environnement `BOUTIQUE_URL`, défaut
+  `https://adf-store.vercel.app`. Lecture côté serveur dans
+  `lib/catalogue-boutique.ts`, rendu par `ShopSection`
+  (serveur) → `ShopContent` (client, textes FR/EN).
+- **Revalidation** : le flux est relu au plus tard toutes les
+  60 s (cache de données du `fetch`) et la page d'accueil est
+  régénérée au plus tard toutes les 300 s (`revalidate` existant
+  de `app/page.tsx`). Un produit masqué ou un prix modifié dans
+  l'administration de la boutique se reflète donc ici en cinq
+  minutes au plus tard, **sans aucun déploiement du site**.
+- **Repli** : flux injoignable, réponse invalide ou catalogue
+  vide → la section retombe exactement sur son état de
+  l'étape 3a (offre imprimée + boutons « Commander la version
+  numérique » et « Découvrir ma boutique », en nouvel onglet).
+  Jamais de section cassée ni d'erreur visible.
+- **Visuels** : servis par la boutique (autre origine) et
+  affichés entiers, jamais rognés, par une balise `img` simple —
+  aucun domaine à autoriser dans la configuration d'images du
+  site, donc aucune casse possible de ce côté-là.

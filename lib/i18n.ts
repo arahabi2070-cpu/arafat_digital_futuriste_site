@@ -167,6 +167,8 @@ export const fr = {
     digitalPrice: 'Version numérique (PDF) : 5 000 FCFA',
     digitalButton: 'Commander la version numérique',
     storeButton: 'Découvrir ma boutique',
+    digitalTitle: 'Mes produits numériques',
+    orderButton: 'Je passe ma commande',
     coverAlt: 'Couverture du livre « Révèle et monétise tes compétences avec l’intelligence artificielle » d’Arafat Kitikil',
   },
   reviews: {
@@ -375,6 +377,8 @@ export const en: Dict = {
     digitalPrice: 'Digital version (PDF): 5,000 FCFA',
     digitalButton: 'Order the digital version',
     storeButton: 'Browse my store',
+    digitalTitle: 'My digital products',
+    orderButton: 'Place my order',
     coverAlt: 'Cover of the book “Révèle et monétise tes compétences avec l’intelligence artificielle” by Arafat Kitikil',
   },
   reviews: {
