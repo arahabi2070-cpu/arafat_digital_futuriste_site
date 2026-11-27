@@ -16,6 +16,20 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('fr')
 
   useEffect(() => {
+    // Priorité au paramètre ?lang= de l'URL (utilisé par les redirections
+    // /en et /fr de next.config.mjs) : un visiteur qui arrive par /en voit
+    // directement le site en anglais, sans passer par le bouton de langue.
+    const fromUrl = new URLSearchParams(window.location.search).get('lang')
+    if (fromUrl === 'fr' || fromUrl === 'en') {
+      setLocaleState(fromUrl)
+      window.localStorage.setItem('adf-locale', fromUrl)
+      document.documentElement.lang = fromUrl
+      // Nettoie l'URL pour garder une adresse propre.
+      const url = new URL(window.location.href)
+      url.searchParams.delete('lang')
+      window.history.replaceState(null, '', url.pathname + url.search + url.hash)
+      return
+    }
     const saved = window.localStorage.getItem('adf-locale') as Locale | null
     if (saved === 'fr' || saved === 'en') {
       setLocaleState(saved)
