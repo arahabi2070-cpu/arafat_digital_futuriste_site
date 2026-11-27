@@ -1,10 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import { Truck } from 'lucide-react'
+import { ShoppingBag, Store, Truck } from 'lucide-react'
 import { useLanguage } from '@/components/language-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { WhatsAppButton } from '@/components/contact-buttons'
+
+const BOUTIQUE_URL = 'https://adf-store.vercel.app'
+const LIVRE_NUMERIQUE_URL = 'https://adf-store.vercel.app/produit/livre-revele-et-monetise-pdf'
 
 export function ShopSection() {
   const { t, locale } = useLanguage()
@@ -43,6 +46,29 @@ export function ShopSection() {
               label={t.shop.button}
               size="lg"
             />
+          </div>
+          <div className="mt-8 flex flex-col items-center gap-3 lg:items-start">
+            <p className="font-display text-xl font-bold tracking-tight text-primary">{t.shop.digitalPrice}</p>
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <a
+                href={LIVRE_NUMERIQUE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex h-14 items-center justify-center gap-2 rounded-full brand-gradient px-7 text-base font-bold text-white shadow-lg shadow-sky-900/25 transition-all hover:brightness-110 hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-500/40"
+              >
+                <ShoppingBag className="size-5" aria-hidden="true" />
+                {t.shop.digitalButton}
+              </a>
+              <a
+                href={BOUTIQUE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-border bg-background px-7 text-base font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-secondary hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
+              >
+                <Store className="size-5 text-primary" aria-hidden="true" />
+                {t.shop.storeButton}
+              </a>
+            </div>
           </div>
         </div>
       </div>

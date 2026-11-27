@@ -164,6 +164,9 @@ export const fr = {
     priceLabel: '7 500 FCFA',
     delivery: 'Livraison physique offerte au centre-ville de Garoua.',
     button: 'Commander le livre imprimé',
+    digitalPrice: 'Version numérique (PDF) : 5 000 FCFA',
+    digitalButton: 'Commander la version numérique',
+    storeButton: 'Découvrir ma boutique',
     coverAlt: 'Couverture du livre « Révèle et monétise tes compétences avec l’intelligence artificielle » d’Arafat Kitikil',
   },
   legalPage: {
@@ -350,6 +353,9 @@ export const en: Dict = {
     priceLabel: '7,500 FCFA',
     delivery: 'Free physical delivery in downtown Garoua.',
     button: 'Order the printed book',
+    digitalPrice: 'Digital version (PDF): 5,000 FCFA',
+    digitalButton: 'Order the digital version',
+    storeButton: 'Browse my store',
     coverAlt: 'Cover of the book “Révèle et monétise tes compétences avec l’intelligence artificielle” by Arafat Kitikil',
   },
   legalPage: {
