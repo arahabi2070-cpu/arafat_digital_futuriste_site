@@ -4,3 +4,6 @@ out/
 .env*
 *.log
 .DS_Store
+
+# Le gabarit documenté (noms seulement, aucune valeur) est versionné.
+!.env.example
