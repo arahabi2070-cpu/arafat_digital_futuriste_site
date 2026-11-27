@@ -6,6 +6,7 @@ import {
   type AvisService,
 } from '@/lib/avis-messages'
 import { envoiAutorise, ipDepuisRequete } from '@/lib/limitation'
+import { notifierBoutiquePush } from '@/lib/push-boutique'
 
 /**
  * POST /api/avis — dépôt public d'un avis sur un service (Phase 2,
@@ -93,5 +94,13 @@ export async function POST(requete: Request) {
       { status: 500 },
     )
   }
+  // Phase 4 — le propriétaire est prévenu qu'un avis attend sa
+  // modération (via la boutique, en arrière-plan, échec absorbé).
+  notifierBoutiquePush({
+    type: 'avis',
+    titre: 'Nouvel avis en attente de modération',
+    corps: `${avis.nom} — ${avis.note}/5`,
+    url: 'https://adf-go.vercel.app/admin',
+  })
   return NextResponse.json({ ok: true, statut: avis.statut }, { status: 201 })
 }

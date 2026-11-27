@@ -138,3 +138,72 @@ produits numériques.
   affichés entiers, jamais rognés, par une balise `img` simple —
   aucun domaine à autoriser dans la configuration d'images du
   site, donc aucune casse possible de ce côté-là.
+
+## Console et notifications — Phase 4 du plan console
+
+La console unique vit dans la boutique (adf-store.vercel.app,
+`/admin`) : elle réunit les deux administrations et affiche
+trois compteurs, dont deux viennent d'ici — avis services en
+attente et messages non lus. Le volet boutique (console, envoi
+push, PWA) est documenté dans le `docs/ARCHITECTURE.md` de la
+boutique, §19.
+
+### Le pont de compteurs — `GET /api/compteurs`
+
+- Répond deux **nombres**, jamais de contenus :
+  `{ avisEnAttente, messagesNonLus }`, lus depuis le dépôt
+  avis/messages ci-dessus.
+- **Authentification** : la clé d'administration partagée — la
+  même valeur `ADMIN_API_KEY` que les deux administrations —
+  en en-tête `x-admin-key` ou `Authorization: Bearer …`,
+  comparée en temps constant (`verifyAdminKey`). Sans clé
+  valide : **401**.
+- **Sans base** (état actuel de production) : la route répond
+  `{ nonConfigure: true }` — la console affiche alors « — »
+  pour la part du site, sans erreur. Même réponse si la lecture
+  de la base échoue : le pont ne casse jamais la console.
+
+### Les déclencheurs de notification — `lib/push-boutique.ts`
+
+Le site n'a pas d'infrastructure de notification : après
+l'enregistrement **réussi** d'un message (`POST /api/contact`)
+ou d'un avis service (`POST /api/avis`), le site appelle en
+arrière-plan le point d'entrée de la boutique,
+`POST {BOUTIQUE_URL}/api/push/notifier`, avec la clé partagée
+en en-tête `x-admin-key` et la charge
+`{ type: 'messages' | 'avis', titre, corps, url }` — l'URL
+d'ouverture étant l'administration du site. La boutique envoie
+alors la notification aux appareils abonnés du propriétaire,
+selon ses préférences par type.
+
+**Échec doux, par construction** : l'appel part via `after`
+(Next.js), sa réponse n'est pas attendue, et toute erreur —
+boutique injoignable, `ADMIN_API_KEY` absente — est absorbée en
+silence. L'enregistrement du message ou de l'avis ne dépend
+jamais de cet appel ; sans base, il n'y a rien à notifier et
+rien ne part.
+
+### Activation (rappel)
+
+Le pont et les déclencheurs deviennent réels avec les mêmes
+gestes que la Phase 2 : créer la base Neon du projet site dans
+Vercel (les compteurs lisent alors de vraies données), et
+s'assurer que `ADMIN_API_KEY` du site a **la même valeur** que
+celle de la boutique (c'est elle qui authentifie le pont dans
+les deux sens). Aucun changement de code.
+
+### Preuves locales (27 novembre 2026, serveurs de production locaux)
+
+- Dépôt mémoire de test (`ADF_DEPOT_MEMOIRE=1`) : un message et
+  un avis semés par les routes publiques ; `/api/compteurs`
+  sans clé → 401, mauvaise clé → 401, clé partagée →
+  `{ avisEnAttente: 1, messagesNonLus: 1 }` exact, par les deux
+  formes d'en-tête.
+- Console de la boutique affichant ces compteurs en direct ;
+  site éteint → la console affiche « — » pour la part du site,
+  sans erreur ; site revenu → compteurs à jour.
+- Message et avis créés ici → notification relayée par la
+  boutique et reçue par le faux service push local (journal
+  côté boutique : « Notification relayée depuis le site »).
+  Build `pnpm build` vert.
+

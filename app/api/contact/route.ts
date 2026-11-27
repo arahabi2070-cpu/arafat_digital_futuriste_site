@@ -5,6 +5,7 @@ import {
   type MessageContact,
 } from '@/lib/avis-messages'
 import { envoiAutorise, ipDepuisRequete } from '@/lib/limitation'
+import { notifierBoutiquePush } from '@/lib/push-boutique'
 
 /**
  * POST /api/contact — enregistrement d'un message du formulaire de
@@ -67,6 +68,15 @@ export async function POST(requete: Request) {
 
   try {
     await depot.creerMessage(message)
+    // Phase 4 — le propriétaire est prévenu sur son téléphone
+    // (via la boutique, en arrière-plan, échec absorbé) : un
+    // nouveau message l'attend dans sa boîte de réception.
+    notifierBoutiquePush({
+      type: 'messages',
+      titre: 'Nouveau message sur le site',
+      corps: `${message.nom}${message.service ? ` — ${message.service}` : ''}`,
+      url: 'https://adf-go.vercel.app/admin',
+    })
     return NextResponse.json({ enregistre: true })
   } catch (erreur) {
     console.error('[contact] enregistrement du message impossible :', erreur)
